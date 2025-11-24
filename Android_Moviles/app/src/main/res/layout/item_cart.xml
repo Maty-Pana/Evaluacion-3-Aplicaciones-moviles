@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Imagen del producto -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/colorBackground">
+
+            <ImageView
+                android:id="@+id/iv_product_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="Imagen del producto" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Información del producto -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Producto"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$5.000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:layout_marginTop="4dp" />
+
+            <!-- Controles de cantidad -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <!-- Botón disminuir -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/colorAccent">
+
+                    <ImageButton
+                        android:id="@+id/btn_decrease"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_add"
+                        android:rotation="45"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:tint="@android:color/white"
+                        android:contentDescription="Disminuir cantidad" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Cantidad -->
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_marginHorizontal="8dp" />
+
+                <!-- Botón aumentar -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@color/colorAccent">
+
+                    <ImageButton
+                        android:id="@+id/btn_increase"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_add"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        app:tint="@android:color/white"
+                        android:contentDescription="Aumentar cantidad" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Botón eliminar -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#F44336"
+            android:layout_gravity="top">
+
+            <ImageButton
+                android:id="@+id/btn_remove"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_add"
+                android:rotation="45"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@android:color/white"
+                android:contentDescription="Eliminar del carrito" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

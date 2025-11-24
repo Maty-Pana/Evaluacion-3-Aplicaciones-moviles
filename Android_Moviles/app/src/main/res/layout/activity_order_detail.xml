@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ProgressBar para carga -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <!-- Header de la orden con gradiente -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@color/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_order_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Orden #1"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_order_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="En espera"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:background="@drawable/rounded_background_orange"
+                        android:elevation="2dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#80FFFFFF"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📅 "
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_order_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="22/11/2025 23:28"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.9" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👤 "
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_customer_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cliente ID: 2"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.9" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#80FFFFFF"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total:"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.9" />
+
+                    <TextView
+                        android:id="@+id/tv_order_total"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="$19.250"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:gravity="end" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Título de productos con estilo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Productos del Pedido"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary" />
+        </LinearLayout>
+
+        <!-- RecyclerView para los items de la orden -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_order_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <!-- Botones de acción con mejor diseño -->
+        <LinearLayout
+            android:id="@+id/layout_action_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reject_order"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="✗ Rechazar"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_red_dark"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp"
+                app:cornerRadius="12dp"
+                android:layout_marginEnd="8dp"
+                app:iconGravity="textStart"
+                android:elevation="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_accept_order"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="✓ Aceptar"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/holo_green_dark"
+                app:cornerRadius="12dp"
+                android:layout_marginStart="8dp"
+                app:iconGravity="textStart"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+
+        <!-- Botón de volver -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_back"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="← Volver a Órdenes"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

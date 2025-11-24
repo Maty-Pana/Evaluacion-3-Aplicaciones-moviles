@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.JaniSPAKotlinAPP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Primary brand color (ActionBar y barra superior) -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Azul cielo -->
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorAccent</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+
+        <!-- Fondo general -->
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <!-- Colores del texto -->
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+    </style>
+</resources>

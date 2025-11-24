@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header con ID y Fecha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_order_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pedido #1"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22/11/2025"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Total -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: "
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_order_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$20,000"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Estado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado: "
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En espera"
+                android:textColor="@color/colorTextPrimary"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Usuario ID (oculto para clientes, visible para admin) -->
+        <TextView
+            android:id="@+id/tv_user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente ID: 1"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

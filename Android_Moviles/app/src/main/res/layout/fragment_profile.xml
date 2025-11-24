@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/perfil_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Card para los datos del usuario con BORDE -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/colorAccent"
+        android:layout_marginBottom="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_usuario"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Nombre del usuario -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_nombre"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"/>
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cargando"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <!-- Rol del usuario -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_rol"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"/>
+                <TextView
+                    android:id="@+id/txtUserRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cargando"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <!-- Email del usuario -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_email"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextPrimary"/>
+                <TextView
+                    android:id="@+id/txtUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cargando"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <!-- Botón editar dentro de la card -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_editar_datos"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ProgressBar para mostrar carga -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:visibility="visible" />
+
+    <!-- Botón para ver órdenes (solo para clientes) -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnViewOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_ver_ordenes"
+        style="@style/RoundedButton"
+        android:background="#4CAF50"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone" />
+
+    <!-- Botón de logout -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_cerrar_sesion"
+        style="@style/RoundedButton"
+        android:background="#F44336"
+        android:textColor="@android:color/white"
+        android:padding="12dp" />
+
+
+</LinearLayout>

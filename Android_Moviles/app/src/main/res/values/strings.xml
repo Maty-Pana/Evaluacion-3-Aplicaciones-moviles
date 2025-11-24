@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">JaniSPA</string>
+    <string name="login_title">JaniSPA</string>
+    <string name="login_user_hint">Usuario</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <!-- Formato para el badge de stock: %d será reemplazado por la cantidad -->
+    <string name="stock_format">Stock: %d</string>
+
+    <!-- Nuevas cadenas usadas en ProfileFragment y diálogos -->
+    <string name="user_placeholder">Usuario #%1$d</string>
+    <string name="email_not_available">Email no disponible</string>
+    <string name="edit_profile_title">Editar datos</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="fill_all_fields">Completa todos los campos</string>
+    <string name="cannot_edit_user">No se puede editar: usuario no identificado</string>
+    <string name="could_not_get_user_for_edit">No se pudo obtener datos para editar</string>
+    <string name="data_updated">Datos actualizados</string>
+
+    <!-- Cadenas para fragment_profile.xml -->
+    <string name="perfil_title">Perfil</string>
+    <string name="info_usuario">Información del Usuario</string>
+    <string name="label_nombre">Nombre:</string>
+    <string name="cargando">Cargando...</string>
+    <string name="label_rol">Rol:</string>
+    <string name="label_email">Email:</string>
+    <string name="btn_editar_datos">Editar datos</string>
+    <string name="btn_ver_ordenes">Ver Mis Órdenes</string>
+    <string name="btn_cerrar_sesion">Cerrar Sesión</string>
+</resources>

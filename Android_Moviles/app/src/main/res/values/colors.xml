@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2AB7CA</color> <!-- Azul cielo -->
+    <color name="colorSecondary">#77D9A1</color> <!-- Verde menta suave -->
+    <color name="colorBackground">#F5F9FA</color> <!-- Blanco humo -->
+    <color name="colorTextPrimary">#333333</color> <!-- Gris carbón -->
+    <color name="colorTextSecondary">#6C757D</color> <!-- Gris medio -->
+    <color name="colorAccent">#007B8A</color> <!-- Azul petróleo -->
+
+    <!-- Divider color utilizado en diálogos -->
+    <color name="colorDivider">#E0E0E0</color>
+
+    <!-- Colores para secciones de gestión -->
+    <color name="colorGestionProductos">#FF6B6B</color> <!-- Rojo coral -->
+    <color name="colorGestionProductosLight">#FFE5E5</color> <!-- Fondo rojo suave -->
+
+    <color name="colorGestionUsuarios">#4ECDC4</color> <!-- Verde azulado -->
+    <color name="colorGestionUsuariosLight">#E8F8F7</color> <!-- Fondo verde suave -->
+
+    <color name="colorGestionOrdenes">#FFE066</color> <!-- Amarillo dorado -->
+    <color name="colorGestionOrdenesLight">#FFF9E5</color> <!-- Fondo amarillo suave -->
+
+    <!-- Colores adicionales -->
+    <color name="primary_color">#2196F3</color>
+    <color name="primary_color_dark">#1976D2</color>
+    <color name="accent_color">#FF4081</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="red">#F44336</color>
+    <color name="orange">#FF9800</color>
+    <color name="blue">#2196F3</color>
+</resources>

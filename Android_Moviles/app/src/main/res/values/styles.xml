@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorAccent</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:buttonStyle">@style/RoundedButton</item>
+        <item name="bottomNavigationStyle">@style/RoundedBottomNavigation</item>
+    </style>
+
+    <style name="RoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorBackground</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedShape</item>
+    </style>
+
+    <style name="RoundedShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="RoundedBottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="itemIconTint">@color/colorBackground</item>
+        <item name="itemTextColor">@color/colorBackground</item>
+        <item name="shapeAppearanceOverlay">@style/RoundedShape</item>
+    </style>
+</resources>

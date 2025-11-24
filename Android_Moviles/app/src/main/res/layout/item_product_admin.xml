@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#F8F5FF">
+
+        <!-- Header con imagen y info principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_image" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del Producto"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#6B46C1" />
+
+                <TextView
+                    android:id="@+id/txtProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$0.00"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#10B981"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/txtProductStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stock: 0"
+                    android:textSize="14sp"
+                    android:textColor="#6B7280"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/txtProductDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción del producto"
+            android:textSize="14sp"
+            android:textColor="#4B5563"
+            android:layout_marginTop="12dp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E5E7EB"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Botones de acción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"
+                app:icon="@drawable/ic_settings"
+                app:iconSize="18dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:strokeColor="#8B5CF6"
+                android:textColor="#8B5CF6"
+                app:iconTint="#8B5CF6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliminar"
+                android:textSize="14sp"
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconSize="18dp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:strokeColor="#EF4444"
+                android:textColor="#EF4444"
+                app:iconTint="#EF4444" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

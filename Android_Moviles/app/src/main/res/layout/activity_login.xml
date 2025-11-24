@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+    <!-- Toolbar personalizado -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorAccent"
+        android:elevation="4dp"
+        android:title="@string/login_title"
+        android:titleTextColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="198dp"
+            android:layout_height="203dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_user_hint"
+            android:inputType="text"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            android:backgroundTint="@color/colorSecondary"
+            android:background="@drawable/rounded_edittext"
+            android:autofillHints="username" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_password_hint"
+            android:textColor="@color/colorTextPrimary"
+            android:textColorHint="@color/colorTextSecondary"
+            android:inputType="textPassword"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/colorSecondary"
+            android:background="@drawable/rounded_edittext"
+            android:autofillHints="password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_button"
+            android:layout_marginTop="16dp"
+            style="@style/RoundedButton"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/colorBackground"
+            android:background="@color/colorSecondary"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
